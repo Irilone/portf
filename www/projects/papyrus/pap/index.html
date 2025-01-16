@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Sans Condensed' rel='stylesheet'>
+    <title>Papyrus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-outer-container">
+                <div class="sidebar-items-container">
+                    <!-- Sidebar navigation -->
+                    <!-- Will be populated with list items dynamically through JavaScript -->
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="main-content-container">
+                <!-- Search bar -->
+                <div class="search-container">
+                    <input type="text" placeholder="Search">
+                    <!-- Search in and filter components -->
+                    <!-- Toggle button -->
+                    <button id="viewToggle">Switch View</button>
+
+                </div>
+                <div class="table-container">
+                    <!-- Papers table -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Author(s)</th>
+                                <th>Year</th>
+                                <th class='color-column'>Color</th>
+                                <th class='comment-column'>Comment</th>
+                                <th><img src="img/icons/add.webp" alt="Labels" id="options-icon">
+                                    <div id="dropdown-menu" class="dropdown-content hidden">
+                                        <label><input type="checkbox" id="show-color"> Color</label>
+                                        <label><input type="checkbox" id="show-comment"> Comment</label>
+                                    </div>
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table content will be populated dynamically through JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- New cards container -->
+                <div class="cards-container hidden">
+                    <!-- Cards content will be populated dynamically through JavaScript -->
+                </div>
+
+            </div>
+        </main>
+
+        <aside class="details-panel">
+            <div class="outer-details-container">
+                <div class="details-container">
+                    <div class="text-container">
+                        <!-- Container for text content -->
+                        <div class="text-content">
+                            
+                            <!-- Title, authors, year, and abstract will go here -->
+                            <!-- This content will be populated dynamically through JavaScript -->
+                        </div>
+                    </div>
+                    <!-- Container for figures and thumbnail carousel -->
+                    <div class="figures-container">
+                        <img class="active-figure" src="" alt="Active Figure" style="display: none;">
+                        <!-- Thumbnails will be added here -->
+                    </div>
+                </div>
+            </div>
+            <!-- Will be populated with content dynamically through JavaScript -->
+        </aside>
+
+    </div>
+    <script src="scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <div id="customContextMenu" style="display: none; position: absolute; z-index: 1000; background-color: #f0f0f0; padding: 10px; border: 1px solid #d4d4d4;">
+        <button id="addStar">Star</button>
+        <button id="addBookmark">Bookmark</button>
+        <button id="addArchive">Archive</button>
+        <button id="addThesis">Thesis</button>
+        <button id="addProject-x">Project X</button>
+        <button id="addProject-y">Project Y</button>
+        <button id="addExperiment">Experiment</button>
+        <button id="addLiterature">Literature Review</button>
+        <button id="addOpinion">Opinion</button>
+        <button id="addTheory">Theory</button>
+        <button id="addIntroduction">Introduction</button>
+    </div>
+
+</body>
+
+</html>

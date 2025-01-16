@@ -1,0 +1,112 @@
+[
+    {
+      "id": "paper1",
+      "title": "The weirdest people in the world?",
+      "author": "J. Henrich, S. J. Heine, A. Norenzayan",
+      "year": "2010",
+      "source": "Behavioral and Brain Sciences 33, no. 2-3 (2010): 61-83",
+      "doi": "https://doi.org/10.1017/S0140525X0999152X",
+      "abstract": "Behavioral scientists routinely publish broad claims about human psychology and behavior in the world's top journals based on samples drawn entirely from Western, Educated, Industrialized, Rich, and Democratic (WEIRD) societies. Researchers - often implicitly - assume that either there is little variation across human populations, or that these 'standard subjects' are as representative of the species as any other population. Are these assumptions justified? Here, our review of the comparative database from across the behavioral sciences suggests both that there is substantial variability in experimental results across populations and that WEIRD subjects are particularly unusual compared with the rest of the species - frequent outliers. The domains reviewed include visual perception, fairness, cooperation, spatial reasoning, categorization and inferential induction, moral reasoning, reasoning styles, self-concepts and related motivations, and the heritability of IQ. The findings suggest that members of WEIRD societies, including young children, are among the least representative populations one could find for generalizing about humans. Many of these findings involve domains that are associated with fundamental aspects of psychology, motivation, and behavior - hence, there are no obvious a priori grounds for claiming that a particular behavioral phenomenon is universal based on sampling from a single subpopulation. Overall, these empirical patterns suggests that we need to be less cavalier in addressing questions of human nature on the basis of data drawn from this particularly thin, and rather unusual, slice of humanity. We close by proposing ways to structurally re-organize the behavioral sciences to best tackle these challenges. ",
+      "figures": ["/projects/papyrus/pap/img/figures/paper1/fig1.webp", "/projects/papyrus/pap/img/figures/paper1/fig2.webp", "/projects/papyrus/pap/img/figures/paper1/fig3a.webp", "/projects/papyrus/pap/img/figures/paper1/fig3b.webp", "/projects/papyrus/pap/img/figures/paper1/fig3c.webp", "/projects/papyrus/pap/img/figures/paper1/fig4.webp", "/projects/papyrus/pap/img/figures/paper1/fig5.webp"],
+      "starred": "True",
+      "bookmarked": "True",
+      "archived": "False",
+      "thesis": "False",
+      "project-x": "False",
+      "project-y": "True",
+      "all": "True",
+      "label": {
+        "color": "#ffffff",
+        "comments": ""
+      }
+      
+    },
+    {
+      "id": "paper2",
+      "title": "Illusionism as a Theory of Consciousness",
+      "author": "Keith Frankish",
+      "year": "2016",
+      "source": "Journal of Consciousness Studies, 23(11-12), 11–39",
+      "doi": "",
+      "abstract": "This article presents the case for an approach to consciousness that I call illusionism. This is the view that phenomenal consciousness, as usually conceived, is illusory. According to illusionists, our sense that it is like something to undergo conscious experiences is due to the fact that we systematically misrepresent them as having phenomenal properties. Thus, the task for a theory of consciousness is to explain our illusory representations of phenomenality, not phenomenality itself, and the hard problem is replaced by the illusion problem. Although it has had powerful defenders, illusionism remains a minority position, and it is often dismissed as failing to take consciousness seriously. This article seeks to rebut this accusation. It defines the illusionist programme, outlines its attractions, and defends it against some common objections. It concludes that illusionism is a coherent and attractive approach, which deserves serious consideration.      ",
+      "figures": ["/projects/papyrus/pap/img/figures/paper2/fig1.webp"],
+      "starred": "False",
+      "bookmarked": "True",
+      "archived": "False",
+      "thesis": "True",
+      "project-x": "False",
+      "project-y": "True",
+      "all": "True",
+      "label": {
+        "color": "#ffffff",
+        "comments": ""
+      }
+    },
+
+    {
+        "id": "paper3",
+        "title": "Abstraction and Analogy-Making in Artificial Intelligence",
+        "author": "Melanie Mitchell",
+        "year": "2021",
+        "source": "Annals of the New York Academy of Sciences, 1505 (1)",
+        "doi": "https://doi.org/10.1111/nyas.14619",
+        "abstract": "Conceptual abstraction and analogy-making are key abilities underlying humans' abilities to learn, reason, and robustly adapt their knowledge to new domains. Despite a long history of research on constructing artificial intelligence (AI) systems with these abilities, no current AI system is anywhere close to a capability of forming humanlike abstractions or analogies. This paper reviews the advantages and limitations of several approaches toward this goal, including symbolic methods, deep learning, and probabilistic program induction. The paper concludes with several proposals for designing challenge tasks and evaluation measures in order to make quantifiable and generalizable progress in this area.",
+        "figures": ["/projects/papyrus/pap/img/figures/paper3/fig1.webp", "/projects/papyrus/pap/img/figures/paper3/fig2.webp", "/projects/papyrus/pap/img/figures/paper3/fig3.webp", "/projects/papyrus/pap/img/figures/paper3/fig4.webp", "/projects/papyrus/pap/img/figures/paper3/fig5.webp", "/projects/papyrus/pap/img/figures/paper3/fig6.webp", "/projects/papyrus/pap/img/figures/paper3/fig7.webp", "/projects/papyrus/pap/img/figures/paper3/fig8.webp", "/projects/papyrus/pap/img/figures/paper3/fig9.webp"],
+        "starred": "True",
+        "bookmarked": "False",
+        "archived": "False",
+        "thesis": "False",
+        "project-x": "False",
+        "project-y": "True",
+        "all": "True",
+        "label": {
+          "color": "#ffffff",
+          "comments": ""
+        }
+      },
+
+      {
+        "id": "paper4",
+        "title": "On the measure of Intelligence",
+        "author": "Francois Chollet",
+        "year": "2019",
+        "source": "ArXiv, abs/1911.01547",
+        "doi": "https://doi.org/10.48550/arXiv.1911.01547",
+        "abstract": "To make deliberate progress towards more intelligent and more human-like artificial systems, we need to be following an appropriate feedback signal: we need to be able to define and evaluate intelligence in a way that enables comparisons between two systems, as well as comparisons with humans. Over the past hundred years, there has been an abundance of attempts to define and measure intelligence, across both the fields of psychology and AI. We summarize and critically assess these definitions and evaluation approaches, while making apparent the two historical conceptions of intelligence that have implicitly guided them. We note that in practice, the contemporary AI community still gravitates towards benchmarking intelligence by comparing the skill exhibited by AIs and humans at specific tasks such as board games and video games. We argue that solely measuring skill at any given task falls short of measuring intelligence, because skill is heavily modulated by prior knowledge and experience: unlimited priors or unlimited training data allow experimenters to 'buy' arbitrary levels of skills for a system, in a way that masks the system's own generalization power. We then articulate a new formal definition of intelligence based on Algorithmic Information Theory, describing intelligence as skill-acquisition efficiency and highlighting the concepts of scope, generalization difficulty, priors, and experience. Using this definition, we propose a set of guidelines for what a general AI benchmark should look like. Finally, we present a benchmark closely following these guidelines, the Abstraction and Reasoning Corpus (ARC), built upon an explicit set of priors designed to be as close as possible to innate human priors. We argue that ARC can be used to measure a human-like form of general fluid intelligence and that it enables fair general intelligence comparisons between AI systems and humans.",
+        "figures": ["/projects/papyrus/pap/img/figures/paper4/fig1.webp", "/projects/papyrus/pap/img/figures/paper4/fig2.webp", "/projects/papyrus/pap/img/figures/paper4/fig3.webp", "/projects/papyrus/pap/img/figures/paper4/fig4.webp", "/projects/papyrus/pap/img/figures/paper4/fig5.webp", "/projects/papyrus/pap/img/figures/paper4/fig6.webp", "/projects/papyrus/pap/img/figures/paper4/fig7.webp", "/projects/papyrus/pap/img/figures/paper4/fig8.webp", "/projects/papyrus/pap/img/figures/paper4/fig9.webp", "/projects/papyrus/pap/img/figures/paper4/fig10.webp", "/projects/papyrus/pap/img/figures/paper4/fig11.webp", "/projects/papyrus/pap/img/figures/paper4/fig12.webp"],
+        "starred": "True",
+        "bookmarked": "False",
+        "archived": "False",
+        "thesis": "False",
+        "project-x": "True",
+        "project-y": "False",
+        "all": "True",
+        "label": {
+          "color": "#ffffff",
+          "comments": ""
+        }
+      },
+
+      {
+        "id": "paper5",
+        "title": "Core Knowledge",
+        "author": "Elizabeth S. Spelke and Katherine D. Kinzler",
+        "year": "2007",
+        "source": "American Psychologist, 55(11), 1233–1243",
+        "doi": "https://doi.org/10.1111/j.1467-7687.2007.00569.x",
+        "abstract": "Human cognition is founded, in part, on four systems for representing objects, actions, number, and space. It may be based, as well, on a fifth system for representing social partners. Each system has deep roots in human phylogeny and ontogeny, and it guides and shapes the mental lives of adults. Converging research on human infants, non-human primates, children and adults in diverse cultures can aid both understanding of these systems and attempts to overcome their limits. ",
+        "figures": [],
+        "starred": "False",
+        "bookmarked": "False",
+        "archived": "True",
+        "thesis": "False",
+        "project-x": "False",
+        "project-y": "True",
+        "all": "True",
+        "label": {
+          "color": "#ffffff",
+          "comments": ""
+        }
+      }
+  ]
+  
