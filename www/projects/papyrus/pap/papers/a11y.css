@@ -1,0 +1,1235 @@
+@charset "UTF-8";
+
+*,
+::after,
+::before {
+	box-sizing: border-box
+}
+
+ol[class],
+ul[class] {
+	padding: 0
+}
+
+blockquote,
+body,
+dd,
+dl,
+figcaption,
+figure,
+h1,
+h2,
+h3,
+h4,
+li,
+ol[class],
+p,
+ul[class] {
+	margin: 0
+}
+
+/* Optional: Additional styling for the context menu */
+#customContextMenu {
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.close2 {
+	position: fixed;
+	/* Changed from absolute to fixed to keep it in the corner */
+	top: 0;
+	/* Adjusted the position to be inside the window */
+	right: 40px;
+	color: #000;
+	font-size: 40px;
+	font-weight: bold;
+	cursor: pointer;
+	z-index: 1000;
+	/* Ensure it's above other elements */
+}
+
+#customContextMenu button {
+	display: block;
+	background: none;
+	border: none;
+	padding: 0px;
+	width: 100%;
+	text-align: left;
+}
+
+#customContextMenu button:hover {
+	background-color: #e0e0e0;
+}
+
+
+.highlighted {
+	background-color: yellow;
+	/* Change this color as desired for the highlight */
+	color: black;
+	/* Optional: Change text color if needed */
+}
+
+
+body {
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5
+}
+
+ol[class],
+ul[class] {
+	list-style: none
+}
+
+a:not([class]) {
+	text-decoration-skip-ink: auto
+}
+
+img {
+	max-width: 100%;
+	display: block
+}
+
+button,
+input,
+select,
+textarea {
+	font: inherit
+}
+
+.home {
+	width: 100%;
+	margin: 0 auto
+}
+
+.page__title {
+	font-family: IBM Plex Sans Condensed, sans-serif;
+	font-size: 3.6rem
+}
+
+.page__title--home {
+	font-size: 4.8rem;
+	line-height: 4.8rem;
+	margin-bottom: 1.2rem;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column
+}
+
+
+.page__description {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	font-weight: 300
+}
+
+
+
+.comment-input-form {
+	padding: 5px;
+	background: #FFF;
+	border: 1px solid #CCC;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	z-index: 1002;
+	/* Ensure it appears above other content */
+}
+
+.comment-input-form input[type="text"] {
+	margin-bottom: 5px;
+	border-radius: 7px;
+}
+
+.comment {
+	background-color: #f0f0f0;
+	padding: 5px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	border: 1px solid #CCC;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#submitFloatingComment {
+	margin-bottom: 0px;
+	border-radius: 10px;
+	box-shadow: none;
+	/* This line ensures no shadow is applied */
+	border: 0.5x solid #000000;
+}
+
+
+
+
+.sticker {
+	border: 2px solid #000;
+	/* Optional: Adds a border around the sticker */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	/* Optional: Adds a shadow for depth */
+}
+
+.sticker {
+	border: 2px solid #000;
+	/* Optional: Adds a border around the sticker */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	/* Optional: Adds a shadow for depth */
+	background-color: #ffffff;
+}
+
+html {
+	background-color: #ffffff;
+	color: #264653;
+	font-size: 55%;
+	font-family: IBM Plex Sans Condensed, sans-serif;
+}
+
+body {
+	font-size: 16px;
+}
+
+a {
+	color: #86868A;
+	transition: color .25s ease-out
+}
+
+
+
+
+.card {
+	background: #fff
+}
+
+.sr-only {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden
+}
+
+.app {
+	background-color: #ffffff;
+	min-height: 90vh
+}
+
+
+.app {
+	padding: 100px 16px 0 16px
+}
+
+.paper {
+	margin: 0 auto;
+	display: flex;
+	/* Example layout, adjust as necessary */
+    grid-template-columns: 1fr minmax(auto, 1250px) 1fr; /* Adjustable middle column */
+	gap: 20px;
+	/* Adjust the gap as needed */
+	justify-items: center;
+	/* Center items horizontally */
+}
+
+.paper__head {
+	grid-column: 1/span 3;
+	margin-bottom: 24px;
+	/* Fixed width */
+	max-width: 100%;
+	/* Ensure it doesn't overflow its container */
+	margin-left: auto;
+	/* Center the element within its grid column */
+	margin-right: auto;
+	/* Centers the element in the grid layout if applicable */
+	justify-self: center;
+	/* Center this item within its grid area */
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	text-align: justify;
+}
+
+/* If the author names are in a different or more specific element, target it directly */
+.paper__head .paper__meta .author-names {
+	text-align: justify;
+	/* Justify text for a more specific class if needed */
+}
+
+.paper__head .paper__title {
+	margin-bottom: 12px
+}
+
+.paper__head .paper__meta {
+	display: flex;
+	flex-wrap: wrap;
+	width: 45vw;
+	text-align: justify;
+
+}
+
+.paper__head .paper__meta .paper__meta-item {
+	margin: 0 5px 4px 0;
+}
+
+.paper__head .paper__meta .paper__meta-item:after {
+	content: " • "
+}
+
+
+.paper__head .paper__meta .paper__meta-item:last-child:after {
+	content: ""
+}
+
+#paper-abstract+p {
+	width: 55vw;
+	/* Example width, adjust as needed */
+	max-width: 100%;
+	/* Ensures it doesn't exceed the container's width */
+	margin: 20px auto;
+	/* Centers the abstract and adds some vertical spacing */
+	font-size: 1.4rem;
+	/* Adjust font size as needed */
+	text-align: justify;
+	/* Centers the text */
+}
+
+
+.paper__nav.on {
+	top: 0;
+	background: rgba(0, 0, 0, .8)
+}
+
+.paper__nav.on .paper__toc {
+	top: 0;
+	opacity: 1
+}
+
+.paper__nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 20vw;
+	height: 100vh;
+	background: 0 0;
+	z-index: 100;
+	transition: background-color .3s .2s ease-out
+}
+
+/* .paper__toc {
+	position: relative;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	height: 100%;
+	border-radius: 24px 24px 0 0;
+	overflow: auto;
+	transition: top .3s ease-out, opacity .3s ease-out;
+	font-size: 1.8rem
+} */
+
+.paper__toc .toc__header {
+	border-bottom: 1.5px solid #d9dadb;
+	padding: 24px;
+	font-family: IBM Plex Sans Condensed, sans-serif;
+	font-size: 2.4rem;
+	margin: 0
+}
+
+
+.paper__toc ul {
+	list-style: none;
+	padding: 24px;
+	margin: 0
+}
+
+.paper__toc li {
+	margin-bottom: 6px
+}
+
+
+.paper__toc li:hover {
+	background-color: #f0f0f0;
+	/* Lighter background on hover */
+	cursor: pointer;
+	/* Change cursor to indicate clickability */
+}
+
+.paper__toc a {
+	display: block;
+	text-decoration: none;
+	/* Removes underline from links */
+}
+
+.paper__figure {
+	background-color: #fff;
+	padding: 24px;
+	margin-bottom: 24px;
+	max-width: 400px;
+}
+
+.paper__figure img {
+	border: 1px solid #d9dadb;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.paper__figure .paper__figure-caption {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	text-align: left;
+}
+
+.paper__figure caption {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	text-align: left;
+}
+
+.paper__figure table {
+	border-top: 2px solid #bbb;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.paper__figure table th {
+	border: 2px solid #bbb;
+	text-align: left;
+	font-size: 1.6rem;
+	font-weight: bold;
+	font-family: IBM Plex Sans Condensed, sans-serif;
+}
+
+.paper__figure table td {
+	border: 2px solid #bbb;
+	text-align: left;
+	font-size: 1.6rem;
+	font-family: IBM Plex Sans Condensed, sans-serif;
+}
+
+.paper__title {
+	font-family: IBM Plex Sans Condensed, sans-serif;
+	font-size: 25px;
+	line-height: 5.4rem;
+	text-align: center;
+	width: 100%;
+}
+
+.paper__text {
+	font-family: IBM Plex Sans Condensed, sans-serif;
+	font-size: 14px;
+	line-height: 3.2rem
+}
+
+.paper h2,
+.paper h3,
+.paper h4,
+.paper h5,
+.paper h6 {
+	margin: 3.6rem 0 1.2rem 0;
+	color: #000000
+}
+
+.paper h2 {
+	font-size: 20px;
+}
+
+.paper h2:first-of-type {
+	margin-top: 0;
+	text-align: center;
+}
+
+.paper__text :last-child {
+	margin-bottom: 0
+}
+
+.paper ol,
+.paper p,
+.paper ul {
+	margin-bottom: 1.4rem
+}
+
+body.theme--reversed {
+	color: #d4d4d4
+}
+
+body.theme--reversed a {
+	color: #9cdcfe
+}
+
+body.theme--reversed .card,
+body.theme--reversed .paper__figure {
+	background: #252526
+}
+
+body.theme--reversed .app {
+	background-color: #1e1e1e
+}
+
+body.theme--reversed .paper__toc .toc__header {
+	border-bottom-color: #1e1e1e
+}
+
+body.theme--reversed .paper h2,
+body.theme--reversed .paper h3,
+body.theme--reversed .paper h4,
+body.theme--reversed .paper h5,
+body.theme--reversed .paper h6 {
+	color: #d4d4d4
+}
+
+
+
+body.theme--apple2 {
+	background-color: #0b0f0e;
+	font-size: 1.8rem;
+	color: #63ffc1;
+	font-family: IBM Plex Sans Condensed, sans-serif;
+	text-shadow: 0 0 20px #399065
+}
+
+body.theme--apple2 .app {
+	background-color: #131510
+}
+
+.app__signup-form .hbspt-form body.theme--apple2 .hs-button,
+body.theme--apple2 .app__signup-form .hbspt-form .hs-button,
+body.theme--apple2 .button {
+	border-width: 4px;
+	border-color: #63ffc1;
+	border-radius: none
+}
+
+
+body.theme--apple2 .paper__toc .toc__header {
+	font-family: IBM Plex Sans Condensed, sans-serif;
+	border-bottom: 4px solid #63ffc1
+}
+
+body.theme--apple2 .paper h2,
+body.theme--apple2 .paper h3,
+body.theme--apple2 .paper h4,
+body.theme--apple2 .paper h5,
+body.theme--apple2 .paper h6,
+body.theme--apple2 a {
+	color: #63ffc1
+}
+
+body.theme--apple2 .card,
+body.theme--apple2 .paper__figure {
+	background: 0 0;
+	border: 4px solid #63ffc1
+}
+
+body.theme--apple2 .paper__figure img {
+	image-rendering: pixelated
+}
+
+body.theme--apple2 .paper__text,
+body.theme--apple2 .paper__title {
+	font-family: IBM Plex Sans Condensed, sans-serif;
+}
+
+body.theme--apple2 .toc__header {
+	font-size: 3rem;
+	line-height: 3.6rem
+}
+
+
+body.theme--apple2 .paper__meta,
+body.theme--apple2 .paper__toc {
+	font-size: 2.4rem;
+	line-height: 3rem
+}
+
+body.theme--apple2 .paper__text {
+	font-size: 3rem;
+	line-height: 3.6rem
+}
+
+
+
+
+body.theme--apple2 .app__footer {
+	border-top: 4px solid #63ffc1
+}
+
+html.aid--dyslexia .paper__text,
+html.aid--dyslexia .paper__title,
+html.aid--dyslexia .paper__toc {
+	word-spacing: 2.4rem;
+	letter-spacing: 2px
+}
+
+html.aid--dyslexia .paper__text {
+	line-height: 4.2rem
+}
+
+html.aid--xl {
+	font-size: 80%
+}
+
+html.aid--xl body {
+	font-size: 1.8rem
+}
+
+
+
+.app__footer {
+	text-align: center;
+	color: #fff;
+	font-weight: 300;
+	font-size: 1.2rem
+}
+
+
+
+.app__signup-form .hbspt-form label {
+	margin-bottom: 6px
+}
+
+.app__signup-form .hbspt-form .hs-form-required {
+	display: none
+}
+
+
+.app__signup-form .hbspt-form .hs-error-msgs {
+	color: #a92020
+}
+
+.app__signup-form .hbspt-form .hs-button:hover {
+	background: #11223d
+}
+
+@media screen and (min-width:350px) {
+    .paper__text, .paper__head {
+        padding-top: 12px;
+        width: 35vw; /* This will be adjusted in media queries */
+        max-width: 100%; /* Ensures it does not exceed its container */
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: justify;
+        grid-column: 2 / span 1; /* Centers the element in the grid layout */
+        justify-self: center; /* Center this item within its grid area */
+        font-size: clamp(14px, 2vw, 16px); /* Responsive font size */
+    }
+    
+    html {
+        font-size: 57.5%
+    }
+    
+    .app {
+        padding: 140px 16px 120px 16px
+    }
+    
+    .paper {
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 1250px) 1fr; /* Adjustable middle column */
+        column-gap: 0px;
+        align-items: start;
+        justify-items: start;
+        margin-left: 200px;
+        margin-right: 10vw;
+    }
+    
+    .paper__nav {
+        align-self: start;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 19vw;
+        min-width: 200px;
+        /* Adjust this width to fit your content */
+        height: 100vh;
+        /* Full viewport height */
+        background: 0 0;
+        z-index: 100;
+        overflow-y: auto;
+        display: block;
+        /* Enable scroll for overflow content */
+    }
+    
+    .paper__nav.off {
+        display: none;
+        /* Shown when .on class is added */
+    }
+    
+    .paper__toc {
+        border-top: 4px solid #86868A;
+        max-height: 100vh;
+        position: relative;
+        height: auto;
+        border-radius: 0;
+        top: 0;
+        opacity: 1;
+        font-size: 16px;
+    }
+    
+    .paper__toc .toc__header {
+        padding: 12px 36px;
+        font-size: 1.8rem;
+    }
+    
+    .paper__toc ul {
+        margin: 0;
+        padding-bottom: 18px
+    }
+    
+    .paper__toc ul ul {
+        padding: 12px 0 6px 12px
+    }
+    
+    }
+
+@media screen and (min-width:560px) {
+    .paper__text, .paper__head {
+        padding-top: 12px;
+        width: 45vw; /* This will be adjusted in media queries */
+        max-width: 100%; /* Ensures it does not exceed its container */
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: justify;
+        grid-column: 2 / span 1; /* Centers the element in the grid layout */
+        justify-self: center; /* Center this item within its grid area */
+        font-size: clamp(14px, 2vw, 16px); /* Responsive font size */
+    }
+    
+    html {
+        font-size: 57.5%
+    }
+    
+    .app {
+        padding: 140px 16px 120px 16px
+    }
+    
+    .paper {
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 1250px) 1fr; /* Adjustable middle column */
+        column-gap: 0px;
+        align-items: start;
+        justify-items: start;
+        margin-left: 250px;
+        margin-right: 10vw;
+    }
+    
+    .paper__nav {
+        align-self: start;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 19vw;
+        min-width: 250px;
+        /* Adjust this width to fit your content */
+        height: 100vh;
+        /* Full viewport height */
+        background: 0 0;
+        z-index: 100;
+        overflow-y: auto;
+        display: block;
+        /* Enable scroll for overflow content */
+    }
+    
+    .paper__nav.off {
+        display: none;
+        /* Shown when .on class is added */
+    }
+    
+    .paper__toc {
+        border-top: 4px solid #86868A;
+        max-height: 100vh;
+        position: relative;
+        height: auto;
+        border-radius: 0;
+        top: 0;
+        opacity: 1;
+        font-size: 16px;
+    }
+    
+    .paper__toc .toc__header {
+        padding: 12px 36px;
+        font-size: 1.8rem;
+    }
+    
+    .paper__toc ul {
+        margin: 0;
+        padding-bottom: 18px
+    }
+    
+    .paper__toc ul ul {
+        padding: 12px 0 6px 12px
+    }
+    
+    }
+
+@media screen and (min-width:750px) {
+    .paper__text, .paper__head {
+        padding-top: 12px;
+        width: 40vw; /* This will be adjusted in media queries */
+        max-width: 100%; /* Ensures it does not exceed its container */
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: justify;
+        grid-column: 2 / span 1; /* Centers the element in the grid layout */
+        justify-self: center; /* Center this item within its grid area */
+        font-size: clamp(14px, 2vw, 16px); /* Responsive font size */
+    }
+    
+    html {
+        font-size: 57.5%
+    }
+    
+    .app {
+        padding: 140px 16px 120px 16px
+    }
+    
+    .paper {
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 1250px) 1fr; /* Adjustable middle column */
+        column-gap: 36px;
+        align-items: start;
+        justify-items: start;
+        margin-left: 350px;
+        margin-right: 10vw;
+    }
+    
+    .paper__nav {
+        align-self: start;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 19vw;
+        min-width: 350px;
+        /* Adjust this width to fit your content */
+        height: 100vh;
+        /* Full viewport height */
+        background: 0 0;
+        z-index: 100;
+        overflow-y: auto;
+        display: block;
+        /* Enable scroll for overflow content */
+    }
+    
+    .paper__nav.off {
+        display: none;
+        /* Shown when .on class is added */
+    }
+    
+    .paper__toc {
+        border-top: 4px solid #86868A;
+        max-height: 100vh;
+        position: relative;
+        height: auto;
+        border-radius: 0;
+        top: 0;
+        opacity: 1;
+        font-size: 16px;
+    }
+    
+    .paper__toc .toc__header {
+        padding: 12px 36px;
+        font-size: 1.8rem;
+    }
+    
+    .paper__toc ul {
+        margin: 0;
+        padding-bottom: 18px
+    }
+    
+    .paper__toc ul ul {
+        padding: 12px 0 6px 12px
+    }
+    
+    }
+
+@media screen and (min-width:805px) {
+    .paper__text, .paper__head {
+        padding-top: 12px;
+        width: 45vw; /* This will be adjusted in media queries */
+        max-width: 100%; /* Ensures it does not exceed its container */
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: justify;
+        grid-column: 2 / span 1; /* Centers the element in the grid layout */
+        justify-self: center; /* Center this item within its grid area */
+        font-size: clamp(14px, 2vw, 16px); /* Responsive font size */
+    }
+    
+    html {
+        font-size: 57.5%
+    }
+    
+    .app {
+        padding: 140px 16px 120px 16px
+    }
+    
+    .paper {
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 1250px) 1fr; /* Adjustable middle column */
+        column-gap: 36px;
+        align-items: start;
+        justify-items: start;
+        margin-left: 350px;
+        margin-right: 10vw;
+    }
+    
+    .paper__nav {
+        align-self: start;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 19vw;
+        min-width: 350px;
+        /* Adjust this width to fit your content */
+        height: 100vh;
+        /* Full viewport height */
+        background: 0 0;
+        z-index: 100;
+        overflow-y: auto;
+        display: block;
+        /* Enable scroll for overflow content */
+    }
+    
+    .paper__nav.off {
+        display: none;
+        /* Shown when .on class is added */
+    }
+    
+    .paper__toc {
+        border-top: 4px solid #86868A;
+        max-height: 100vh;
+        position: relative;
+        height: auto;
+        border-radius: 0;
+        top: 0;
+        opacity: 1;
+        font-size: 16px;
+    }
+    
+    .paper__toc .toc__header {
+        padding: 12px 36px;
+        font-size: 1.8rem;
+    }
+    
+    .paper__toc ul {
+        margin: 0;
+        padding-bottom: 18px
+    }
+    
+    .paper__toc ul ul {
+        padding: 12px 0 6px 12px
+    }
+    
+    }
+
+
+@media screen and (min-width:1000px) {
+    .paper__text, .paper__head {
+        padding-top: 12px;
+        width: 55vw; /* This will be adjusted in media queries */
+        max-width: 100%; /* Ensures it does not exceed its container */
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: justify;
+        grid-column: 2 / span 1; /* Centers the element in the grid layout */
+        justify-self: center; /* Center this item within its grid area */
+        font-size: clamp(14px, 2vw, 16px); /* Responsive font size */
+    }
+    
+    html {
+        font-size: 57.5%
+    }
+    
+    .app {
+        padding: 140px 16px 120px 16px
+    }
+    
+    .paper {
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 1250px) 1fr; /* Adjustable middle column */
+        column-gap: 36px;
+        align-items: start;
+        justify-items: start;
+        margin-left: 350px;
+        margin-right: 10vw;
+    }
+    
+    .paper__nav {
+        align-self: start;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 19vw;
+        min-width: 350px;
+        /* Adjust this width to fit your content */
+        height: 100vh;
+        /* Full viewport height */
+        background: 0 0;
+        z-index: 100;
+        overflow-y: auto;
+        display: block;
+        /* Enable scroll for overflow content */
+    }
+    
+    .paper__nav.off {
+        display: none;
+        /* Shown when .on class is added */
+    }
+    
+    .paper__toc {
+        border-top: 4px solid #86868A;
+        max-height: 100vh;
+        position: relative;
+        height: auto;
+        border-radius: 0;
+        top: 0;
+        opacity: 1;
+        font-size: 16px;
+    }
+    
+    .paper__toc .toc__header {
+        padding: 12px 36px;
+        font-size: 1.8rem;
+    }
+    
+    .paper__toc ul {
+        margin: 0;
+        padding-bottom: 18px
+    }
+    
+    .paper__toc ul ul {
+        padding: 12px 0 6px 12px
+    }
+    
+    }
+
+@media screen and (min-width:1250px) {
+    .paper__text, .paper__head {
+        padding-top: 12px;
+        width: 60vw; /* This will be adjusted in media queries */
+        max-width: 100%; /* Ensures it does not exceed its container */
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: justify;
+        grid-column: 2 / span 1; /* Centers the element in the grid layout */
+        justify-self: center; /* Center this item within its grid area */
+        font-size: clamp(14px, 2vw, 16px); /* Responsive font size */
+    }
+    
+    html {
+        font-size: 57.5%
+    }
+    
+    .app {
+        padding: 140px 16px 120px 16px
+    }
+    
+    .paper {
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 1250px) 1fr; /* Adjustable middle column */
+        column-gap: 36px;
+        align-items: start;
+        justify-items: start;
+        margin-left: 350px;
+        margin-right: 10vw;
+    }
+    
+    .paper__nav {
+        align-self: start;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 19vw;
+        min-width: 350px;
+        /* Adjust this width to fit your content */
+        height: 100vh;
+        /* Full viewport height */
+        background: 0 0;
+        z-index: 100;
+        overflow-y: auto;
+        display: block;
+        /* Enable scroll for overflow content */
+    }
+    
+    .paper__nav.off {
+        display: none;
+        /* Shown when .on class is added */
+    }
+    
+    .paper__toc {
+        border-top: 4px solid #86868A;
+        max-height: 100vh;
+        position: relative;
+        height: auto;
+        border-radius: 0;
+        top: 0;
+        opacity: 1;
+        font-size: 16px;
+    }
+    
+    .paper__toc .toc__header {
+        padding: 12px 36px;
+        font-size: 1.8rem;
+    }
+    
+    .paper__toc ul {
+        margin: 0;
+        padding-bottom: 18px
+    }
+    
+    .paper__toc ul ul {
+        padding: 12px 0 6px 12px
+    }
+    
+    }
+
+@media screen and (min-width:1450px) {
+	html {
+		font-size: 57.5%
+	}
+
+	.app {
+		padding: 140px 16px 120px 16px
+	}
+
+    .paper {
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 1250px) 1fr; /* Adjustable middle column */
+        column-gap: 36px;
+        align-items: start;
+        justify-items: start;
+        margin-left: 20vw;
+        margin-right: 10vw;
+    }
+
+	.paper__nav {
+		align-self: start;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 19vw;
+        min-width: 350px;
+		/* Adjust this width to fit your content */
+		height: 100vh;
+		/* Full viewport height */
+		background: 0 0;
+		z-index: 100;
+		overflow-y: auto;
+		display: block;
+		/* Enable scroll for overflow content */
+	}
+
+	.paper__nav.off {
+		display: none;
+		/* Shown when .on class is added */
+	}
+
+	.paper__toc {
+		border-top: 4px solid #86868A;
+		max-height: 100vh;
+		position: relative;
+		height: auto;
+		border-radius: 0;
+		top: 0;
+		opacity: 1;
+		font-size: 16px;
+	}
+
+	.paper__toc .toc__header {
+		padding: 12px 36px;
+		font-size: 1.8rem;
+	}
+
+	.paper__toc ul {
+		margin: 0;
+		padding-bottom: 18px
+	}
+
+	.paper__toc ul ul {
+		padding: 12px 0 6px 12px
+	}
+
+    .paper__text, .paper__head {
+        padding-top: 12px;
+        width: 70vw; /* This will be adjusted in media queries */
+        max-width: 100%; /* Ensures it does not exceed its container */
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+        grid-column: 2 / span 1; /* Centers the element in the grid layout */
+        justify-self: center; /* Center this item within its grid area */
+        font-size: clamp(14px, 2vw, 16px); /* Responsive font size */
+    }
+}
+
+
+.nav-toggle-btn {
+	position: fixed;
+	top: 15px;
+	/* Adjust as needed */
+	left: 10px;
+	/* Adjust as needed */
+	z-index: 101;
+	/* Ensures it's above other .paper__nav content */
+}
+
+.nav-toggle-btn img {
+	width: 30px;
+	/* Adjust as needed */
+	height: auto;
+	cursor: pointer;
+}
+
+
+/* .paper__head,
+.paper__text {
+	grid-column: 2 / span 1;
+	margin-left: auto;
+	margin-right: auto;
+	
+} */
+
+
+.tutorial__item {
+	font-size: 2.0rem;
+	margin-bottom: 30px;
+}
+
+.list__header {
+	font-size: 2.0rem;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+.list__item__description {
+	font-size: 1.5rem;
+	padding-bottom: 10px;
+}
+
+.list__item__figure {
+	background-color: #fff;
+	padding: 20px;
+	margin-bottom: 20px;
+	width: auto;
+}
+
+.list__item__figure img {
+	border: 1px solid #d9dadb;
+	width: auto;
+}
+
+.list__item__figure__custom {
+	background-color: #fff;
+	padding: 20px;
+	margin-bottom: 20px;
+	width: max-content;
+}
+
+.false__footer {
+	text-align: left;
+	font-size: 1.6rem
+}
+
