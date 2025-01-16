@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SYNCHRONICITY</title>
+    <style>
+        /* Google Fonts for a modern look */
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;800&display=swap');
+
+/* General Styles */
+body, p, ul, li {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+html, body { margin: 0; padding: 0; }
+body {
+    background-color: rgb(0, 0, 0);
+    transition: background-color 0.3s ease;
+    overflow-x: hidden;
+}
+
+/* Header and Team Member Styles */
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 1em;
+    text-align: center;
+    margin: 10px;
+
+}
+
+.team-member {
+    padding: 1em;
+    text-align: center;
+    margin: 10px;
+
+}
+
+/* New Rule */
+.team-member a img {
+    margin-top: -20px; /* Negative margin to pull it closer */
+}
+
+/* Heading Styles */
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    color: white;
+}
+
+/* Dual Section and Column Styles */
+#dual-section {
+    display: flex;
+    justify-content: center;  /* Centers the columns */
+}
+
+.column {
+    flex: 1;
+    margin: 5px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    max-width: 700px;
+    position: relative;
+}
+
+/* Make the element initially invisible */
+.fade-out {
+    opacity: 0.4;  /* Adjust this value */
+  transition: opacity 1s;
+}
+
+/* Make the element fade in */
+.fade-in {
+  opacity: 1 !important;  /* Overriding other styles */
+  transition: opacity 1s;
+}
+
+
+/* Experience, Narrative, Interactive, and Teamwork Styles */
+#experience, #narrative, #interactive, #teamwork {
+    flex-basis: calc(50% - 10px);
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+#experience { order: 1; }
+#narrative { order: 2; }
+#interactive { order: 3; }
+#teamwork { order: 4; }
+
+/* About Section */
+#about p {
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Banner Styles */
+#banner-image {
+    width: 5%;
+    height: 5%;
+    border-radius: 0;
+    margin-left: auto;
+    margin-right: 10px;
+    display: block;
+    object-fit: contain;
+}
+
+#banner-middle {
+    width: 500px;
+    height: 300px;
+    border-radius: 0;
+    margin: 0;
+}
+
+#banner-middle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Generic Section */
+section {
+    padding: 0em;
+}
+  .team-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+/* Team Grid */
+.team-grid {
+   /* display: flex;;
+    width: calc((160px + 10) * 7);
+    justify-content: flex-start;  /* Changed from space-evenly
+    min-width: 100%; 
+    min-height: 100%;
+    align-items: flex-start;
+    height: 100%;
+    overflow-x: auto;
+    /*padding: 0 10px; /* Adjust the padding as needed */
+    display: flex;
+    flex-wrap: wrap;  /* This allows items to wrap to the next row */
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#team {
+    width: 100%;
+}
+
+.team-member {
+    flex: 0 0 auto;
+    flex-shrink: 0;
+    width: 160px;
+    min-width: 160px;
+    height: 210px;
+    min-height: 210px;
+    transition: all 0.3s ease;
+    border-radius: 0px;
+    margin: 20px 15px;  /* Vertical and horizontal spacing */
+    text-overflow: ellipsis;
+    background-image: url('img/frame3.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.team-member p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    overflow: auto; 
+}
+
+.team-member img {
+    margin-bottom: 0px;
+    filter: grayscale(100%);  /* This line adds the black and white filter */
+}
+
+/*.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+*/
+/* Image Styles */
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+#bottom-image {
+    width: 350px;
+    height: 200px;
+    object-fit: fill;
+    border-radius: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+#bottom-banner, #images {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+}
+#sunww {
+width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* Spotlight */
+#spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at center, transparent, black 80%);
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: overlay;
+    opacity: 0.9;
+    z-index: 9999;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Audio Elements -->
+    <audio id="wind-audio" loop>
+        <source src="aud/wind.mp3" type="audio/mp3">
+    </audio>
+    <audio id="footsteps-audio">
+        <source src="aud/footsteps.mp3" type="audio/mp3">
+    </audio>
+    
+    <audio id="beast-audio">
+        <source src="aud/beast.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="cry-audio">
+        <source src="aud/cry.mp3" type="audio/mp3">
+    </audio>
+
+    
+
+    <!-- Spotlight -->
+    <div id="spotlight"></div>
+
+    <!-- Main Content -->
+    <div id="content">
+
+        <img id="banner-image" src="img/banner2.webp" alt="Banner">
+        <br></br>
+        <br></br>
+        <br></br>
+        <!-- Banner Middle -->
+        <div id="banner-middle-container">
+            <img id="banner-middle" src="img/inshad.webp" alt="Shad">
+        </div>
+
+<!-- About Section -->
+<section id="about">
+    <p style="text-align: center;">
+        <br></br>
+        <br>
+        <strong>
+            Join the excitement of a team-based adventure! In this thrilling challenge, players must synchronize their movements by deciphering the shapes displayed on the screen and perfectly mimicking them to achieve victory. Prepare to immerse yourself in a synchronized interactive adventure in the shadows!
+        </strong>
+        <br></br>
+        <br><br>
+
+    </p>
+</section>
+
+<!-- Video Section -->
+<section id="video-section">
+    <div style="text-align: center;">
+        <video id="about-video" class="fade-out" controls width="800">
+            <source src="vid/intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+
+        <!-- Dual Section -->
+        <div id="dual-section">
+            <div class="column">
+               <div class="column fade-out" id="left-column"> 
+                    <!-- content -->
+ 
+
+                <!-- Experience Section -->
+                <section id="experience">
+                    <h2>The Experience</h2>
+                    <p>Step into an immersive world, where sound, lights, and visuals guide your journey through a narrative. An enriching experience that challenges and entertains, promoting memorable moments of collaboration, amusement, and the discovery of hidden talents.</p>
+                </section>
+
+                <!-- Narrative Section -->
+                <section id="narrative">
+                    <h2>The Game's Narrative</h2>
+                    <p>In a post-apocalyptic world, Earth is shrouded in darkness following the destruction of the sun. A group of survivors has established a colony with an artificial sun.</p>
+                    <br>
+                    <img id="sunww" src="img/sunww.webp" alt="Shad">
+                    <br>
+                    <p>The absence of sunlight has triggered the evolution of blind, fast-moving predators. To reach the colony safely, you must mimic the shapes of tunnel objects to evade these hunters.</p>
+                    <br>
+                    <img id="images" src="img/wolf2.webp" alt="Shad">
+                    <br>
+                    <p>Success leads to the sunlit colony with essential resources, while failure leaves you exposed to these relentless predators.</p>
+                    <br>
+                    <img id="images" src="img/bottom3.webp" alt="Shad">
+                    <br>
+                </section>
+
+                <!-- Interactive Section -->
+                <section id="interactive">
+                    <br>
+                    <h2>Interactive System</h2>
+                    <p>We use Google's pose detection and image segmentation to track body movements and create lifelike shadows. Players will physically interact with the system, responding to hints on a digital screen. Inspired by games like Just Dance, it offers accessible motion tracking without extensive equipment.</p>
+                    <br>
+                </section>
+              </div> 
+          </div>
+
+            <div class="column">
+                  <div class="column fade-out" id="right-column"> 
+                    <!-- Teamwork Section -->
+                 <section id="teamwork">
+                    <img id="images" src="img/gameplay3.webp" alt="Shad">
+                    <h2>Teamwork</h2>
+                    <p>Teams find themselves immersed in a captivating scenario, confined within a room with a unique mission: they must flawlessly replicate the shapes and movements of objects in perfect synchrony within a specified timeframe to evade pursuing monsters. Only when this collective effort of mirroring is successfully executed will the door unlock, granting the team their much-awaited freedom.</p>
+                    <img id="images" src="img/tree2.webp" alt="Shad">
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <img id="images" src="img/seesaw2.webp" alt="Shad">
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <img id="images" src="img/tunnel2.webp" alt="Shad">
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                 </section>
+                </div>
+
+            </div>
+        </div>
+        <section id="team">
+            <h2 style="text-align: center;">Meet the Team</h2>
+              <div class="team-container"> <!-- New wrapper div -->
+                   <div class="team-grid">
+                            <!-- Team Members -->
+                       <div class="team-member">
+                    <img src="img/dorian.webp" alt="Member 1">
+                    <p>Dorian<br>Avillus Irilone</p>
+                    <a href="mailto:avillus@chalmers.se">
+                        <img src="img/email23.webp" alt="Email">
+                    </a>
+                     </div>
+                     <div class="team-member">
+                    <img src="img/emma.webp" alt="Member 2">
+                    <p>Emma<br>Pettersson</p>
+                    <a href="mailto:emmp@chalmers.se">
+                        <img src="img/email23.webp" alt="Email">
+                    </a>
+                     </div>
+                      <div class="team-member">
+                    <img src="img/jose.webp" alt="Member 3">
+                    <p>José<br>Bener</p>
+                    <a href="mailto:bjose@chalmers.se">
+                        <img src="img/email23.webp" alt="Email">
+                    </a>
+                      </div>
+                       <div class="team-member">
+                    <img src="img/nat.webp" alt="Member 4">
+                    <p>Natthamon<br>Pongchanchai</p>
+                    <a href="mailto:natpon@chalmers.se">
+                        <img src="img/email23.webp" alt="Email">
+                    </a>
+                     </div>
+                     <div class="team-member">
+                    <img src="img/sara.webp" alt="Member 5">
+                    <p>Sara<br>Persson</p>
+                    <a href="mailto:persara@chalmers.se">
+                        <img src="img/email23.webp" alt="Email">
+                    </a>
+                      </div>
+                      <div class="team-member">
+                    <img src="img/yue.webp" alt="Member 6">
+                    <p>Yue<br>Lou</p>
+                    <a href="mailto:yuelo@chalmers.se">
+                        <img src="img/email23.webp" alt="Email">
+                    </a>
+                      </div>
+                      <div class="team-member">
+                    <img src="img/juno.webp" alt="Member 7">
+                    <p>Zelei<br>Weng</p>
+                    <a href="mailto:zelei@chalmers.se">
+                        <img src="img/email23.webp" alt="Email">
+                    </a>
+                     </div>
+                 </div>
+            </div>
+         </section>
+    </div>
+
+        <!-- Team Section -->
+
+      
+
+    </div>
+</body>
+<script>
+ // Function to play the audio
+function playBeastSound() {
+    beastAudio.currentTime = 0;
+    beastAudio.play();
+}
+
+// Function to play the cry audio
+function playCrySound() {
+    cryAudio.currentTime = 0;
+    cryAudio.play();
+}
+
+// Initialize elements and variables
+const spotlight = document.getElementById('spotlight');
+const windAudio = document.getElementById('wind-audio');
+const footstepsAudio = document.getElementById('footsteps-audio');
+const beastAudio = document.getElementById('beast-audio');
+const cryAudio = document.getElementById('cry-audio');
+let isScrolling = false;
+let beastInterval;
+let cryInterval;
+
+// Play wind sound continuously
+windAudio.play();
+
+// Play the beast audio every 30 seconds
+beastInterval = setInterval(playBeastSound, 28000);
+
+// Play the cry audio every 15 seconds
+cryInterval = setInterval(playCrySound, 13000);
+
+// Spotlight effect on mouse move
+document.addEventListener('mousemove', (e) => {
+    const x = e.clientX;
+    const y = e.clientY;
+    spotlight.style.background = `radial-gradient(circle at ${x}px ${y}px, transparent, black 80%)`;
+});
+
+// Footsteps and background color change on scroll
+window.addEventListener('scroll', function() {
+    // Play footsteps audio
+    if (!isScrolling) {
+        footstepsAudio.play();
+        isScrolling = true;
+    }
+
+    // Stop footsteps audio after scrolling stops
+    clearTimeout(window.scrollFinished);
+    window.scrollFinished = setTimeout(() => {
+        footstepsAudio.pause();
+        footstepsAudio.currentTime = 0;
+        isScrolling = false;
+    }, 100);
+
+    // Add class when element is in viewport
+    function checkVisibility(el) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+            el.classList.add('fade-in');
+        }
+    }
+
+    document.addEventListener('scroll', function() {
+        // Function to check if an element is in the viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top <= window.innerHeight &&
+                rect.bottom >= 0
+            );
+        }
+        // Fade-in elements
+        const leftColumn = document.getElementById('left-column');
+        const rightColumn = document.getElementById('right-column');
+            // Add fade-in for video
+    const aboutVideo = document.getElementById('about-video');
+    if (isInViewport(aboutVideo)) {
+        aboutVideo.classList.add('fade-in');
+    }
+        if (isInViewport(leftColumn)) {
+            leftColumn.classList.add('fade-in');
+        }
+        if (isInViewport(rightColumn)) {
+            rightColumn.classList.add('fade-in');
+        }
+    });
+
+    // Change background color based on scroll position
+    const scrolled = window.scrollY;
+    const maxHeight = document.body.scrollHeight - window.innerHeight;
+    const percentage = Math.min((scrolled / maxHeight) * 100, 100) / 100;
+    const brightness = Math.floor(30 + (200 - 30) * percentage);
+    
+    if (scrolled >= maxHeight) {
+        // Clear intervals to stop playing sounds
+        clearInterval(beastInterval);
+        clearInterval(cryInterval);
+        windAudio.pause();
+    }
+    // Update the background color of #content and .team-container
+    const newBackgroundColor = `rgb(${brightness}, ${brightness}, ${brightness})`;
+    document.getElementById('content').style.backgroundColor = newBackgroundColor;
+    document.querySelector('viewport').style.backgroundColor = newBackgroundColor;
+
+
+});
+
+// Initialize the video element
+const aboutVideo = document.getElementById('about-video');
+
+// Function to pause all background audio
+function pauseBackgroundAudio() {
+    windAudio.pause();
+    footstepsAudio.pause();
+    clearInterval(beastInterval);
+    clearInterval(cryInterval);
+}
+
+// Function to resume all background audio
+function resumeBackgroundAudio() {
+    windAudio.play();
+    footstepsAudio.play();
+    beastInterval = setInterval(playBeastSound, 28000);
+    cryInterval = setInterval(playCrySound, 13000);
+}
+
+// Event listener for when the video starts playing
+aboutVideo.addEventListener('play', pauseBackgroundAudio);
+
+// Event listener for when the video is paused or ends
+aboutVideo.addEventListener('pause', resumeBackgroundAudio);
+aboutVideo.addEventListener('ended', resumeBackgroundAudio);
+
+</script>
+</html>
